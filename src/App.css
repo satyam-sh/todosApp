@@ -1,0 +1,123 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+}
+h1{
+    color: rgb(52, 53, 54);
+}
+hr{
+    border: 0.6px solid grey;
+    width: 50%;
+    
+}
+.addTodoBtn{
+    align-self: flex-start;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: snow;
+    padding: 10px 14px 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    
+}
+.todoListContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.userInputContainer{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    border: 1px solid gold;
+    height: 100px;
+    outline: none;
+    border-radius: 5px;
+}
+input{
+    border: 1px solid gold;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+label{
+    color:rgb(85, 97, 110) ;
+    line-height: 2rem;
+}
+.saveTodo{
+    color:snow;
+    background-color: sandybrown;
+    border: none;
+    padding: 10px 12px 10px 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    
+}
+ul{
+    list-style: none;
+   padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+li{
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 5px 1px rgb(250, 190, 190);
+    border-radius: 5px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topicPara{
+line-height: 10px;
+font-size: 14px;
+}
+.topicHeading{
+    line-height: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.eachTodoContainerC{
+   box-shadow:  0 0 5px 1px rgb(182, 255, 207);;
+}
+.deleteBtn{
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    color: goldenrod;
+    font-size: 20px;
+    cursor: pointer;
+}
+.tickBtn{
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+.alltodos{
+    display: flex;
+    margin-top :14px;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    box-shadow: 0 0 3px 1px blanchedalmond;
+}
