@@ -13,7 +13,7 @@ if (alltodos === null) {completed = []
    incompleted = []
 }
 else {completed = alltodos.filter(e => e.isTicked)
-  alltodos.filter(e => !e.isTicked)
+  incompleted = alltodos.filter(e => !e.isTicked)
 }
 
 
@@ -50,17 +50,19 @@ const makeTodos =() =>{
 
   if (a === null) a = [];
   
-  const newTodo = {
-    id : idNumber(),
-    topic,description,isTicked
-  };
-  a.push(newTodo)
-  localStorage.setItem('MYTODOS',JSON.stringify(a));
-  // const res = JSON.parse(localStorage.getItem('MYTODOS'));
-  // setTodoArr(res)
-  filter()
-  setDescription('');
-  setTopic('');
+  else{
+    const newTodo = {
+      id : idNumber(),
+      topic,description,isTicked
+    };
+    a.push(newTodo)
+    localStorage.setItem('MYTODOS',JSON.stringify(a));
+    // const res = JSON.parse(localStorage.getItem('MYTODOS'));
+    // setTodoArr(res)
+    filter()
+    setDescription('');
+    setTopic('');
+  }
   
   
 }
