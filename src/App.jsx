@@ -7,8 +7,16 @@ import "./App.css"
 
 
 const alltodos = JSON.parse(localStorage.getItem('MYTODOS'));
-const completed = alltodos.filter(e => e.isTicked);
-const incompleted = alltodos.filter(e => !e.isTicked)
+let  completed = [];
+let incompleted = []
+if (alltodos === null) {completed = []
+   incompleted = []
+}
+else {completed = alltodos.filter(e => e.isTicked)
+  alltodos.filter(e => !e.isTicked)
+}
+
+
 
       // setTodoArr(incompleted);
       // setCompletedTodos(completed);
@@ -38,7 +46,9 @@ function App (){
 
 
 const makeTodos =() =>{
-  const a = JSON.parse(localStorage.getItem('MYTODOS'))
+  let a = JSON.parse(localStorage.getItem('MYTODOS'))
+
+  if (a === null) a = [];
   
   const newTodo = {
     id : idNumber(),
@@ -69,7 +79,7 @@ const deleteTodo = (todoId) =>{
     
     const a = JSON.parse(localStorage.getItem("MYTODOS"));
     const b = a.map(e => {
-      if (e.id == ID) return {...e , isTicked : !e.isTicked}
+      if (e.id === ID) return {...e , isTicked : !e.isTicked}
       else return e ;
     })
     localStorage.setItem("MYTODOS" , JSON.stringify(b));
